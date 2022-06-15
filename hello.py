@@ -1,15 +1,10 @@
-from flask import Flask
-from models import HelloModel
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
-def index():   
-   #membuat objek dari kelas HelloModel
-   model = HelloModel()
-   
-   # mengembalikan nilai yang diambil dari model
-   return model.getText()
+def index():
+   from flask import Flask, render_template
 
 @app.route("/works")
 def it_works():
