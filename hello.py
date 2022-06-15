@@ -5,8 +5,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():   
-   return render_template('hello.html')
-
+   #membuat objek dari kelas HelloModel
+   model = HelloModel()
+   
+   # mengembalikan nilai yang diambil dari model
+   return model.getText()
 
 @app.route("/works")
 def it_works():
