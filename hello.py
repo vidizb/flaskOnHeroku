@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-   from flask import Flask, render_template
+   return render_template('hello.html')
 
 @app.route("/works")
 def it_works():
